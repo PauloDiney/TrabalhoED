@@ -4,11 +4,6 @@
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    
-
-}
-body{
-    height: 100vh;
 }
 
 .principal-cima {
@@ -18,66 +13,64 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    color:#335D95;
-
-    
-   
+    color: #335D95;
 }
 
 .principal-cima img {
     width: 160px;
     height: 120px;
     margin: 20px;
-
 }
 
-nav.menu-lateral{
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+}
+
+nav.menu-lateral {
     width: 120px;
-    height: 100vh;
-    background-color:#123460 ;
+    background-color: #123460;
     padding: 40px 0px 40px 1%;
     box-shadow: 3px 0 0 #0571ff;
     overflow: hidden;
     transition: .5s;
 }
 
-nav.menu-lateral.expandir{
+nav.menu-lateral.expandir {
     width: 300px;
 }
 
-.btn-expandir{
+.btn-expandir {
     width: 100vw;
     padding-left: 10px;
-
 }
 
-.btn-expandir > i{
+.btn-expandir > i {
     color: rgb(255, 255, 255);
     font-size: 34px;
     cursor: pointer;
-    
 }
 
-ul{
-    height: 100vh;
+ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-ul li.item-menu{
+ul li.item-menu {
     transition: .2s;
 }
 
-ul li.ativo{
-    background-color:  #335D95;
-}
-
-ul li.item-menu:hover{
+ul li.ativo {
     background-color: #335D95;
 }
 
+ul li.item-menu:hover {
+    background-color: #335D95;
+}
 
-
-ul li.item-menu a{
+ul li.item-menu a {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -87,18 +80,32 @@ ul li.item-menu a{
     line-height: 40px;
 }
 
-ul li.item-menu a .txt-link{
+ul li.item-menu a .txt-link {
     margin-left: 70px;
     transition: 1s;
     opacity: 0;
 }
 
-nav.menu-lateral.expandir .txt-link{
+nav.menu-lateral.expandir .txt-link {
     margin-left: 40px;
     opacity: 1;
 }
 
-ul li.item-menu a .icon i{
+ul li.item-menu a .icon i {
     font-size: 30px;
 }
 
+.lado-meio {
+    flex-grow: 1;
+    background-color: #b8d7ff;
+    display: flex;
+    flex-direction: row;
+align-items: flex-start;
+    justify-content: center;
+    color: white;
+    
+}
+
+.lado-meio input{
+    margin: 10px;
+}
