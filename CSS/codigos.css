@@ -1,0 +1,10 @@
+.codigos{
+    width: 100%;
+    height: 50%;
+    margin-top: 10px;
+    background-color: #123460;
+}
+
+.codigos .codigos-explicao{
+    color: black;
+}
