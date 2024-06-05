@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    
+
+}
+body{
+    height: 100vh;
+}
+
+.principal-cima {
+    width: 100vw;
+    height: 15vh;
+    background-color: #002454;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:#335D95;
+
+    
+   
+}
+
+.principal-cima img {
+    width: 160px;
+    height: 120px;
+    margin: 20px;
+
+}
+
+nav.menu-lateral{
+    width: 120px;
+    height: 100vh;
+    background-color:#123460 ;
+    padding: 40px 0px 40px 1%;
+    box-shadow: 3px 0 0 #0571ff;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100vw;
+    padding-left: 10px;
+
+}
+
+.btn-expandir > i{
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    cursor: pointer;
+    
+}
+
+ul{
+    height: 100vh;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    background-color:  #335D95;
+}
+
+ul li.item-menu:hover{
+    background-color: #335D95;
+}
+
+
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon i{
+    font-size: 30px;
+}
+
