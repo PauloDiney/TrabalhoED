@@ -149,3 +149,14 @@
     margin: 10px;
 }
 
+footer .rodape{
+    width: 100%;
+    height: 120px;
+    background-color: #002454;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+

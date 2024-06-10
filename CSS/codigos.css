@@ -5,9 +5,11 @@
     background-color: #123460;
     padding: 20px; 
     color: white; 
-    display: flex;
-    flex-direction: row;
-    
+}
+
+.codigos .codigos-explicao {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -40,5 +42,21 @@
 }
 
 
+.footer {
+    width: 100%;
+    height: 120px;
+    background-color: #002454;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
 
-
+.rodape {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
