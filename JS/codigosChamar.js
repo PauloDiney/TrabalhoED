@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectElement = document.querySelector('.form-select');
     const codigosSections = document.querySelectorAll('.codigos-explicao');
 
+    codigosSections.forEach(section => {
+        section.style.display = 'none';
+    });
     selectElement.addEventListener('change', function () {
         const selectedOption = selectElement.value;
         

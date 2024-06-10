@@ -1,10 +1,44 @@
-.codigos{
+.codigos {
     width: 100%;
-    height: 50%;
+    height: auto;
     margin-top: 10px;
     background-color: #123460;
+    padding: 20px; 
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    
 }
 
-.codigos .codigos-explicao{
-    color: black;
+
+.codigos .codigos-explicao {
+    margin-top: 20px; 
 }
+
+.codigos p{
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.codigos h3{
+    color: #FFD700;
+}
+
+.codigos strong{
+    color: #FFD700;
+    
+    
+}
+
+.codigos ul li{
+    margin: 10px;
+    
+}
+
+.codigos h2{
+    color: #FFD700;
+}
+
+
+
+
