@@ -27,12 +27,6 @@
 
             <ul>
                 <ul>
-                    <li class="item-menu ">
-                        <a href="/aulas.html">
-                            <span class="icon"><i class="bi bi-house-door"></i></span>
-                            <span class="txt-link">Home</span>
-                        </a>
-                    </li>
                     <li class="item-menu ativo">
                         <a href="/Aulas/codigos.html">
                             <span class="icon"><i class="bi bi-braces"></i></span>
@@ -61,8 +55,9 @@
                 <option selected>Escolher Conteudo</option>
                 <option value="tad">TAD</option>
                 <option value="2">Listas Simplesmente Encadeadas</option>
-                <option value="3">Listas Duplamente Encadeadas</option> </select>
-           
+                <option value="3">Listas Duplamente Encadeadas</option>
+            </select>
+
 
             <section class="codigos">
                 <section id="tad" class="codigos-explicao">
@@ -153,9 +148,41 @@
                     implementação.
                     </p>
 
+                    <h2>Usando o TAD</h2>
+                    <section class="alinhar-precode">
+                        <pre><code class="preCode" >
+public class Program
+{
+    public static void Main()
+    {
+        IStack<'int> stack = new Stack<'int>();
+
+
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+
+
+        Console.WriteLine(stack.Pop()); // Output: 3
+        Console.WriteLine(stack.Peek()); // Output: 2
+        Console.WriteLine(stack.Pop()); // Output: 2
+        Console.WriteLine(stack.Pop()); // Output: 1
+        Console.WriteLine(stack.IsEmpty()); // Output: True
+    }
+}
+                    </code></pre>
+                    </section>
+
+                    <h3>Conclusão</h3>
+                    <p>TAD permite que você defina tipos de dados e suas operações de uma maneira que a implementação
+                    interna fique oculta, facilitando a manutenção, reutilização e modularidade do código. Em C#, usamos
+                    interfaces para definir o comportamento do TAD e classes para implementar esse comportamento. Essa
+                    separação de interface e implementação é fundamental para criar sistemas flexíveis e robustos.</p> 
+
 
 
                 </section>
+
                 <section id="2" class="codigos-explicao">
                     <h2>Listas Simplesmente Encadeadas</h3>
                         <p>
@@ -163,32 +190,105 @@
                         </p>
                         <p>Listas encadeadas são uma estrutura de dados fundamental em ciência da computação. Elas
                             permitem armazenar e manipular uma coleção de elementos de forma dinâmica, onde cada
-                            elemento aponta para o próximo na sequência. Existem dois tipos principais de listas
-                            encadeadas: Listas Simplesmente Encadeadas e Listas Duplamente Encadeadas.</p>
-                        
-                           <h3>Listas Simplesmente Encadeadas:</h3>
-                        
+                            elemento aponta para o próximo na sequência.</p>
+
+                        <h3>Listas Simplesmente Encadeadas:</h3>
+
                         <p> Lista Simplesmente Encadeada (ou Singly Linked List) é uma coleção de elementos chamados de
                             nós (nodes), onde cada nó contém dois componentes:</p>
-                           <p>Dados: O valor armazenado no nó.</p> 
-                            <p>Ponteiro: Um ponteiro para o próximo nó na lista.
+                        <p>Dados: O valor armazenado no nó.</p>
+                        <p>Ponteiro: Um ponteiro para o próximo nó na lista.
                             Estrutura do Nó</p>
+                        <section class="alinhar-precode">
+                             <pre><code class="preCode">
+public class Node
+{
+    public int Value { get; set; }
+    public Node Next { get; set; }
+
+
+    public Node(int value)
+    {
+        Value = value;
+        Next = null;
+    }
+}
+                        </code></pre>
+                        </section>
+                        <h3>Estrutura da Lista Simplesmente Encadeada:</h3>
+                        <section class="alinhar-precode">
+                            <pre><code class="preCode">
+ public class SinglyLinkedList
+  {
+    private Node head;
+                                
+                                
+    public SinglyLinkedList()
+        {
+            head = null;
+        }
+                                
+                                
+        // Método para adicionar um novo nó no início da lista
+        public void AddFirst(int value)
+            {
+                Node newNode = new Node(value);
+                newNode.Next = head;
+                head = newNode;
+            }
+                                
+                                
+        // Método para remover o primeiro nó da lista
+        public int RemoveFirst()
+            {
+                 if (head == null)
+                     {
+                        throw new InvalidOperationException("A lista está vazia");
+                     }
+                                
+                                
+                    int value = head.Value;
+                    head = head.Next;
+                    return value;
+            }
+                                
+                                
+        // Método para imprimir todos os elementos da lista
+        public void PrintList()
+            {
+                Node current = head;
+                while (current != null)
+                    {
+                        Console.Write(current.Value + " -> ");
+                        current = current.Next;
+                    }
+                    Console.WriteLine("null");
+            }
+        
+                       </code></pre>
+                       </section>
+
+                       <h3>Explicação</h3>
+                       <p>* AddFirst: Adiciona um novo nó no início da lista. O novo nó aponta para o antigo nó da cabeça, e a cabeça é atualizada para o novo nó.</p>
+                       <p> RemoveFirst: Remove e retorna o valor do primeiro nó da lista. A cabeça é atualizada para o próximo </p>nó.
+                       <p>* PrintList: Imprime todos os elementos da lista, do primeiro ao último.</p>
 
                 </section>
                 <section id="3" class="codigos-explicao">
                     <h3>Listas Duplamente Encadeadas</h3>
+
                 </section>
             </section>
 
         </section>
     </section>
-        
-        <footer>
-            <section class="rodape">
-                 <h2>Seti Feito por aluno FATEC</h2>
-            </section>
-           
-        </footer>
-        <script src="/JS/menu.js"></script>
-        <script src="/JS/codigosChamar.js"></script>
+
+    <footer>
+        <section class="rodape">
+            <h2>Seti Feito por aluno FATEC</h2>
+        </section>
+
+    </footer>
+    <script src="/JS/menu.js"></script>
+    <script src="/JS/codigosChamar.js"></script>
 </body>

@@ -3,7 +3,7 @@
     height: auto;
     margin-top: 10px;
     background-color: #123460;
-    padding: 20px; 
+    padding: 1px; 
     color: white; 
 }
 
@@ -59,4 +59,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.alinhar-precode{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.preCode{
+   
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #0548a0;
 }
