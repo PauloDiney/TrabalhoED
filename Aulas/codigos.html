@@ -39,12 +39,7 @@
                             <span class="txt-link">Videos</span>
                         </a>
                     </li>
-                    <li class="item-menu">
-                        <a href="/Aulas/exemplos.html">
-                            <span class="icon"><i class="bi bi-backpack3-fill"></i></span>
-                            <span class="txt-link">Exemplos</span>
-                        </a>
-                    </li>
+                    
 
                 </ul>
 
@@ -276,7 +271,110 @@ public class Node
                 </section>
                 <section id="3" class="codigos-explicao">
                     <h3>Listas Duplamente Encadeadas</h3>
+                    <p>Uma Lista Duplamente Encadeada é semelhante a uma lista simplesmente encadeada, mas cada nó contém uma referência para o próximo nó e uma referência para o nó anterior. Isso permite a navegação bidirecional.
+                        Estrutura de um Nó</p>
 
+                        <h2>Codigos:</h2>
+
+                        <section class="alinhar-precode">
+                            <pre><code class="preCode">
+{
+    public int Value { get; set; }
+    public DoublyNode Next { get; set; }
+    public DoublyNode Previous { get; set; }
+                                
+                                
+    public DoublyNode(int value)
+    {
+        Value = value;
+        Next = null;
+        Previous = null;
+    }
+}
+                       </code></pre>
+                       </section>
+
+                    <p>Estrutura da Lista Duplamente Encadeada</p>
+
+                    <section class="alinhar-precode">
+                        <pre><code class="preCode">
+public class DoublyLinkedList
+{
+    private DoublyNode head;
+    private DoublyNode tail;
+    
+    
+    public DoublyLinkedList()
+        {
+            head = null;
+            tail = null;
+        }
+    
+    
+        // Método para adicionar um novo nó no início da lista
+        public void AddFirst(int value)
+        {
+            DoublyNode newNode = new DoublyNode(value);
+            if (head == null)
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
+                newNode.Next = head;
+                head.Previous = newNode;
+                head = newNode;
+            }
+        }
+    
+    
+        // Método para remover o primeiro nó da lista
+        public int RemoveFirst()
+        {
+            if (head == null)
+            {
+                throw new InvalidOperationException("A lista está vazia");
+            }
+    
+    
+            int value = head.Value;
+            head = head.Next;
+    
+    
+            if (head != null)
+            {
+                head.Previous = null;
+            }
+            else
+            {
+                tail = null;
+            }
+    
+    
+            return value;
+        }
+    
+    
+        // Método para imprimir todos os elementos da lista
+        public void PrintList()
+        {
+        DoublyNode current = head;
+        while (current != null)
+        {
+        Console.Write(current.Value + " <-> ");
+        current = current.Next;
+        }
+        Console.WriteLine("null");
+    }
+}
+                   </code></pre>
+                   </section>
+
+                   <p>Explicação
+                   <p>* AddFirst: Adiciona um novo nó no início da lista. O novo nó aponta para a antiga cabeça, e a cabeça é atualizada para o novo nó. Se a lista estiver vazia, a cauda também é atualizada para o novo nó.</p> 
+                    <p>* RemoveFirst: Remove e retorna o valor do primeiro nó da lista. A cabeça é atualizada para o próximo nó. Se a nova cabeça não for nula, a referência anterior da cabeça é ajustada para nulo. Se a lista ficar vazia, a cauda também é ajustada para nulo.</p>
+                   <p>* PrintList: Imprime todos os elementos da lista, do primeiro ao último, com setas duplas para indicar a ligação bidirecional.</p> </p>
                 </section>
             </section>
 
@@ -285,7 +383,7 @@ public class Node
 
     <footer>
         <section class="rodape">
-            <h2>Seti Feito por aluno FATEC</h2>
+            <h2>Siti feito por alunos FATEC</h2>
         </section>
 
     </footer>
