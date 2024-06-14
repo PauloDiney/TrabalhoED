@@ -132,24 +132,24 @@
     flex-shrink: 0;
 }
 
-.image-content img {
+.image-content > img {
    width: 50vw;
     height: auto;
     border-radius: 10px;
 }
 
-.quem-somos h1 {
+.quem-somos > h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.quem-somos p {
+.quem-somos > p {
     margin-bottom: 10px;
     font-size: 1rem;
     margin: 10px;
 }
 
-footer .rodape{
+footer > .rodape{
     width: 100%;
     height: 120px;
     background-color: #002454;
